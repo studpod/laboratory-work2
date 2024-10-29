@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Скласти два числа</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Використання CDN -->
+    <style>
+        body {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <h1>Скласти два числа</h1>
+    <input type="number" id="num1" placeholder="Перше число" required>
+    <input type="number" id="num2" placeholder="Друге число" required>
+    <button id="calculate">Обчислити</button>
+    <h2 id="result"></h2>
+
+    <script>
+        $(document).ready(function(){
+            $('#calculate').click(function(){
+                var number1 = parseFloat($('#num1').val());
+                var number2 = parseFloat($('#num2').val());
+                
+                // Перевірка на NaN
+                if (isNaN(number1) || isNaN(number2)) {
+                    $('#result').text('Будь ласка, введіть обидва числа.');
+                } else {
+                    var sum = number1 + number2;
+                    $('#result').text('Результат: ' + sum);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
