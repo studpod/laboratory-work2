@@ -1,0 +1,1 @@
+function greet(o){return`Hello, ${o}!`}function factorial(o){return o<=1?1:o*factorial(o-1)}console.log(greet("Alice")),console.log("Factorial of 5 is: "+factorial(5));
